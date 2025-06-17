@@ -1,0 +1,15 @@
+{
+  "name": "paraksh-tech",
+  "version": "1.0.0",
+  "description": "This is Paraksh Tech backend pages",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "parakshTech-backend"
+  },
+  "author": "",
+  "license": "ISC"
+}
