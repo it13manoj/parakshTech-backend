@@ -7,7 +7,8 @@ const cors = require('cors')
 const bodyParser = require('body-parser');
 const {PORT} =  process.env;
 const fs = require('fs');
-const userRoute = require('./Router/User')
+const Routes = require('./Router/index')
+const path = require('path')
 
 
 
@@ -16,9 +17,9 @@ const userRoute = require('./Router/User')
 app.use(cors());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use(Routes);
 
-
-app.use("/api",userRoute)
 
 if (process.env.USE_HTTPS === 'true') {
   const sslOptions = {
